@@ -4,8 +4,8 @@ Quality improvement project to improve mental health treatment by translating ev
 ### Prerequisites
 1. Gradle
 1. MySQL
-## Getting Started
 
+## Getting Started
 MiMQIP is a web application java application and MySql datastore.  Inorder to start you will need to create a local MySQL
 database instance and than start up the web application which is configured to run locally via Jetty.
 
