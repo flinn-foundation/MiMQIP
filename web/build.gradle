@@ -1,0 +1,46 @@
+buildscript {
+
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.akhikhl.gretty:gretty:1.4.0"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+repositories {
+    mavenLocal()
+    jcenter()
+    maven {
+        url "http://central.maven.org/maven2"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'log4j', name: 'log4j', version: '1.2.16'
+    compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.3'
+    compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
+    compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    compile group: 'commons-httpclient', name: 'commons-httpclient', version: '3.1'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.2'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.40'
+    gretty group: 'mysql', name: 'mysql-connector-java', version: '5.1.40'
+    compile group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.2.11'
+    compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.2.11'
+
+}
+
+gretty{
+    port = 8080
+    contextConfigFile =    project.getProjectDir().toString() + '/src/test/resources/jetty-config/jetty-env.xml'
+}
+
