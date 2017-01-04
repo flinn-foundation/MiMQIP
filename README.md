@@ -13,8 +13,8 @@ database instance and than start up the web application which is configured to r
 
 ### Installing
 There are two parts to installation, first you will need to setup the datastore and load in testing data.  Instructions can be found
-in the [Database README](https://github.com/gregfarris/MiMQIP/database/README.md).  Once the database is configured you can run teh web application
-via gradle jetty plugins, details can be found in the [Web README](https://github.com/gregfarris/MiMQIP/web/README.md)
+in the [Database README](https://github.com/gregfarris/MiMQIP/blob/master/database/README.md).  Once the database is configured you can run teh web application
+via gradle jetty plugins, details can be found in the [Web README](https://github.com/gregfarris/MiMQIP/blob/master/web/README.md)
 
 ## Deployment
 
