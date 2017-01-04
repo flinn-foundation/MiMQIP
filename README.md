@@ -3,21 +3,18 @@ Quality improvement project to improve mental health treatment by translating ev
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+MiMQIP is a web application java application and MySql datastore.  Inorder to start you will need to create a local MySQL
+database instance and than start up the web application which is configured to run locally via Jetty.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+1. Gradle
+1. MySQL
 
 ### Installing
-
-
-## Running the tests
-
+There are two parts to installation, first you will need to setup the datastore and load in testing data.  Instructions can be found
+in the [Database README](https://github.com/gregfarris/MiMQIP/database/README.md).  Once the database is configured you can run teh web application
+via gradle jetty plugins, details can be found in the [Web README](https://github.com/gregfarris/MiMQIP/web/README.md)
 
 ## Deployment
 
