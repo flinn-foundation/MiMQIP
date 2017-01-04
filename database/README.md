@@ -23,8 +23,8 @@ CREATE USER 'mqip'@'localhost' IDENTIFIED BY 'mqip';
 ```
 1. Grant that user access to the MiMQIP database
 ```
+GRANT ALL PRIVILEGES ON MiMQIP.* TO 'mqip'@'localhost' WITH GRANT OPTION;
 ```
-
 1. Run the script to create the tables and load data
 ```
 SOURCE *absolute-path*/20130507-050001-flinn.sql
