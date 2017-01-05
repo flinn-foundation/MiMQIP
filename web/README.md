@@ -12,6 +12,10 @@ To run the application interactivly simple run the gradle task
 ```
 gradle appRun
 ```
+To access the sample data goto localhost and logon with doctor:doctor
+```
+http://localhost:8080/sample/
+```
 
 ## Deployment
 
