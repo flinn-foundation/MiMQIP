@@ -2,17 +2,12 @@
 Quality improvement project to improve mental health treatment by translating evidence-based medication guidelines into daily clinical practices.
 This application was orginaly developed for the Flinn Foundation in mid 2000s and is being refactored
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
-
 Load MySQL
 
-### Installing
-You need to load test data locally for testing.  This is currently done via a sql script '20130507-050001-flinn.sql'.
+## Getting Started
+You need to load test data locally for testing.  This is currently done via a sql script '20130507-050001-flinn.sql'. The following can exicuted from the *mysql* command line.
+
 1. We will need to create a database
 ```
 CREATE DATABASE MiMQIP;
@@ -25,15 +20,14 @@ CREATE USER 'mqip'@'localhost' IDENTIFIED BY 'mqip';
 ```
 GRANT ALL PRIVILEGES ON MiMQIP.* TO 'mqip'@'localhost' WITH GRANT OPTION;
 ```
-1. Run the script to create the tables and load data
+1. Run the script to create the tables and load data (must use absolute
 ```
-SOURCE *absolute-path*/20130507-050001-flinn.sql
+USE MiMQIP;
 ```
-
-
-## Running the tests
-
-
+1. Run the script to create the tables and load data (*must use absolute path to the file*)
+```
+SOURCE ??????/20130507-050001-flinn.sql
+```
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
