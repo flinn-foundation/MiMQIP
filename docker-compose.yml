@@ -1,0 +1,10 @@
+version: '2'
+services:
+  database:
+    build: ./database
+    ports:
+        - "3306:3306"
+  web:
+    build: ./web
+    ports:
+      - "8080:8080"

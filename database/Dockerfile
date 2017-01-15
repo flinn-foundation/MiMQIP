@@ -1,0 +1,8 @@
+FROM mysql:5.7
+
+ENV MYSQL_DATABASE=MiMQIP
+ENV MYSQL_USER=mqip
+ENV MYSQL_PASSWORD=mqip
+ENV MYSQL_RANDOM_ROOT_PASSWORD=yes
+
+COPY ./20130507-050001-flinn.sql /docker-entrypoint-initdb.d
