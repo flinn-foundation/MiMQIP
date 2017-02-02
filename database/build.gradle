@@ -15,7 +15,7 @@ buildscript {
 liquibase {
     activities {
         main {
-            changeLogFile 'scheme.groovy'
+            changeLogFile 'master.groovy'
             url 'jdbc:mysql://localhost:3306/MiMQIP?createDatabaseIfNotExist=true'
             username 'liquibase'
             password 'liquibase'

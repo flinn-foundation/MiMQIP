@@ -1,0 +1,8 @@
+AdminName,Description
+Admin,Administrator of MiniEHR
+FacilityAdmin,Administrator of a Facility within MiniEHR
+Doctor,Doctor
+DoctorAssistant,Doctors Assistant (full rights?)
+LabClerk,Lab Clerk (enter lab results, no other rights without another role)
+RecommendAdmin,Administrator of Recommend
+RecommendExport,Recommend Exporter Person
