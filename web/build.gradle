@@ -9,9 +9,12 @@ buildscript {
     }
     dependencies {
         classpath "org.akhikhl.gretty:gretty:1.4.0"
+        classpath "gradle.plugin.fi.evident.gradle.beanstalk:gradle-beanstalk-plugin:0.0.7"
     }
 }
+version = '1.0.0-SNAPSHOT-' + System.currentTimeMillis();
 
+apply plugin: "fi.evident.beanstalk"
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'org.akhikhl.gretty'
@@ -44,3 +47,24 @@ gretty{
     contextConfigFile =    project.getProjectDir().toString() + '/src/test/resources/jetty-config/jetty-env.xml'
 }
 
+war {
+    from('src/main/resources/ebextensions') {
+        into('.ebextensions')
+    }
+}
+
+beanstalk {
+    profile = 'default' // Only required if using .aws/credentials
+    s3Endpoint = "s3.amazonaws.com"
+
+    beanstalkEndpoint = "elasticbeanstalk.us-east-1.amazonaws.com"
+
+    deployments {
+        // Example to deploy to the same env
+        staging {
+            war = 'build/libs/web-' + version + '.war';
+            application = 'tonquin-bravo'
+            environment = 'Sample-env'
+        }
+    }
+}
